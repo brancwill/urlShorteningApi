@@ -1,0 +1,35 @@
+@use 'variables';
+
+.GetStarted {
+    @include variables.flex('column', 'flex-end', 'center');
+    padding: 400px 0 180px;
+    width: 100%;
+    margin: 0;
+    padding-left: 0;
+    background-image: url(../assets/img/illustration-working.svg);
+    background-repeat: no-repeat;
+    background-size: 130%;
+    background-position: -10% 5%;
+    h1, p {
+        text-align: center;
+    }
+    h1 {
+        color: variables.$black;
+        margin: 0 auto 10px;
+    }
+    p {
+        width: 85%;
+        margin: 0 auto;
+        color: variables.$gray;
+    }
+    button {
+        width: 60%;
+        margin: 40px auto 0;
+        height: 56px;
+        border-radius: 30px;
+        border: none;
+        background-color: variables.$turquoise;
+        color: white;
+        font: 700 20px "Poppins";
+    }
+}

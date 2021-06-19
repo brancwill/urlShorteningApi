@@ -1,0 +1,51 @@
+@use 'variables';
+
+.Footer {
+    .FooterTop {
+        @include variables.flex('column', 'center', 'center');
+        text-align: center;
+        background-color: variables.$darkerBlue;
+        background-image: url(../assets/img/bg-boost-mobile.svg);
+        color: white;
+        padding: 20% 0;
+        button {
+            width: 60%;
+            margin: auto;
+            height: 60px;
+            border: none;
+            border-radius: 30px;
+            background-color: variables.$turquoise;
+            color: white;
+            font: 700 20px "Poppins";
+        }
+    }
+    .FooterBottom {
+        @include variables.flex('column', 'space-around', 'center');
+        background-color: variables.$blacker;
+        padding-top: 18%;
+        padding-bottom: 30px;
+        img {
+            filter: brightness(0) invert(100);
+            margin: auto;
+            margin-bottom: 10%;
+        }
+        .FooterList {
+            @include variables.flex('column', 'space-between', 'center');
+            margin: auto;
+            text-align: center;
+            .FooterTitle {
+                color: white;
+                font: 700 16px "Poppins";
+            }
+            p {
+                color: variables.$lightGray;
+                font: 500 15px "Poppins";
+            }
+        }
+        .SocIcons {
+            @include variables.flex('row', 'space-evenly', 'center');
+            width: 50%;
+            margin: 10% auto 0;
+        }
+    }
+}

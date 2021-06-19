@@ -1,0 +1,332 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,700;1,500&display=swap");
+.Navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: alignment;
+  width: 100%;
+  padding: 40px 3vw 0;
+  box-sizing: border-box;
+}
+.Navigation .Logo {
+  height: 12vw;
+  min-height: 30px;
+  max-height: 60px;
+  width: auto;
+  margin: 0;
+}
+.Navigation .Hamburger {
+  margin-top: 10px;
+  max-height: 50px;
+}
+.Navigation .Hamburger .Line {
+  width: 7vw;
+  max-width: 70px;
+  height: 1vw;
+  max-height: 7px;
+  background-color: #9E9AA8;
+  margin: 1.5vw 0;
+}
+.Navigation .Hamburger .Line:first-child {
+  margin-top: 0;
+}
+.Navigation .Hamburger .Line:last-child {
+  margin-bottom: 0;
+}
+.Navigation .closed {
+  display: none;
+}
+.Navigation .open {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: alignment;
+  gap: 20px;
+  position: absolute;
+  background-color: #3A3054;
+  width: 80vw;
+  margin: auto;
+  left: 5vw;
+  top: 100px;
+  border-radius: 10px;
+  padding: 30px 20px;
+}
+.Navigation .open a {
+  text-decoration: none;
+  color: white;
+}
+.Navigation .open h4 {
+  display: flex;
+  flex-direction: direction;
+  justify-content: center;
+  align-items: center;
+  font: 700 18px "Poppins";
+  margin: 10px auto;
+}
+.Navigation .open .mobileNavTop {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: alignment;
+  border-bottom: 1px solid #9E9AA8;
+  padding-bottom: 20px;
+}
+.Navigation .open .mobileNavBot .MobileSignUp {
+  margin-top: 20px;
+  width: 100%;
+  height: 50px;
+  background-color: #2BD0D0;
+  border-radius: 30px;
+}
+.Navigation .desktopNav {
+  display: none;
+}
+
+.GetStarted {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: alignment;
+  padding: 400px 0 180px;
+  width: 100%;
+  margin: 0;
+  padding-left: 0;
+  background-image: url(../assets/img/illustration-working.svg);
+  background-repeat: no-repeat;
+  background-size: 130%;
+  background-position: -10% 5%;
+}
+.GetStarted h1, .GetStarted p {
+  text-align: center;
+}
+.GetStarted h1 {
+  color: #34313D;
+  margin: 0 auto 10px;
+}
+.GetStarted p {
+  width: 85%;
+  margin: 0 auto;
+  color: #9E9AA8;
+}
+.GetStarted button {
+  width: 60%;
+  margin: 40px auto 0;
+  height: 56px;
+  border-radius: 30px;
+  border: none;
+  background-color: #2BD0D0;
+  color: white;
+  font: 700 20px "Poppins";
+}
+
+.LinkShortener {
+  box-sizing: border-box;
+  position: relative;
+}
+.LinkShortener .LSBox {
+  background-color: #EFF1F7;
+}
+.LinkShortener .LSBox .Input {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: alignment;
+  width: 90%;
+  position: relative;
+  margin: auto;
+  top: -80px;
+  padding: 10px 0;
+  height: 40vw;
+  background-color: #3A3054;
+  border-radius: 10px;
+  background-image: url(../assets/img/bg-shorten-mobile.svg);
+  background-position: 100%;
+  background-repeat: no-repeat;
+}
+.LinkShortener .LSBox .Input input, .LinkShortener .LSBox .Input button {
+  width: 85%;
+  margin: auto;
+  height: 50px;
+  border-radius: 10px;
+}
+.LinkShortener .LSBox .Input input::placeholder {
+  padding-left: 10px;
+  font: 500 16px "Poppins";
+}
+.LinkShortener .LSBox .Input button {
+  border: none;
+  background-color: #2BD0D0;
+  color: white;
+  font: 700 18px "Poppins";
+}
+.LinkShortener .noDisplay {
+  display: none;
+}
+
+.About {
+  margin-top: -90px;
+  padding: 150px 0 80px;
+  background-color: #EFF1F7;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: alignment;
+  gap: 10px;
+}
+.About .TopInfo {
+  margin: auto;
+  text-align: center;
+  padding-bottom: 80px;
+  width: 90%;
+}
+.About .TopInfo p {
+  color: #9E9AA8;
+}
+.About .Card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: alignment;
+}
+.About .Card h3, .About .Card p {
+  text-align: center;
+}
+.About .Card h3 {
+  font-size: 22px;
+}
+.About .Card p {
+  font-size: 15px;
+  color: #9E9AA8;
+  margin-top: 0;
+  width: 85%;
+  margin: auto;
+}
+.About .Card .CardCircle {
+  white-space: pre-wrap;
+  margin: -50px auto 0;
+  width: 100px;
+  height: 100px;
+  z-index: 1;
+  background-color: #3A3054;
+  border-radius: 100%;
+  display: flex;
+  flex-direction: direction;
+  justify-content: center;
+  align-items: center;
+}
+.About .Card .CardInfo {
+  margin: -50px auto 0;
+  background-color: white;
+  width: 85%;
+  padding: 60px 0 50px;
+  border-radius: 10px;
+}
+.About .Card .vl {
+  border-left: 10px solid #2BD0D0;
+  height: 90px;
+  position: relative;
+  left: 50%;
+  margin-left: -3px;
+  top: 0;
+}
+.About .Card:last-of-type .vl {
+  display: none;
+}
+
+.Footer .FooterTop {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: alignment;
+  text-align: center;
+  background-color: #3A3054;
+  background-image: url(../assets/img/bg-boost-mobile.svg);
+  color: white;
+  padding: 20% 0;
+}
+.Footer .FooterTop button {
+  width: 60%;
+  margin: auto;
+  height: 60px;
+  border: none;
+  border-radius: 30px;
+  background-color: #2BD0D0;
+  color: white;
+  font: 700 20px "Poppins";
+}
+.Footer .FooterBottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: alignment;
+  background-color: #232127;
+  padding-top: 18%;
+  padding-bottom: 30px;
+}
+.Footer .FooterBottom img {
+  filter: brightness(0) invert(100);
+  margin: auto;
+  margin-bottom: 10%;
+}
+.Footer .FooterBottom .FooterList {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: alignment;
+  margin: auto;
+  text-align: center;
+}
+.Footer .FooterBottom .FooterList .FooterTitle {
+  color: white;
+  font: 700 16px "Poppins";
+}
+.Footer .FooterBottom .FooterList p {
+  color: #EFF1F7;
+  font: 500 15px "Poppins";
+}
+.Footer .FooterBottom .SocIcons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: alignment;
+  width: 50%;
+  margin: 10% auto 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+}
+
+.App {
+  width: 100vw;
+  box-sizing: border-box;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  padding-left: 0;
+  overflow-x: hidden;
+}
+
+h1 {
+  font: 700 42px "Poppins";
+}
+
+h2 {
+  font: 700 28px "Poppins";
+}
+
+h3 {
+  font: 700 22px "Poppins";
+}
+
+h4 {
+  font: 700 18px "Poppins";
+}
+
+p {
+  font: 500 18px "Poppins";
+}
+
+/*# sourceMappingURL=styles.css.map */

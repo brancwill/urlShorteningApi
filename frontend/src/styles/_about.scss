@@ -1,0 +1,64 @@
+@use 'variables';
+
+.About {
+    margin-top: -90px;
+    padding: 150px 0 80px;
+    background-color: variables.$lightGray;
+    @include variables.flex('column', 'space-evenly', 'center');
+    gap: 10px;
+    .TopInfo {
+        margin: auto;
+        text-align: center;
+        padding-bottom: 80px;
+        width: 90%;
+        p {
+            color: variables.$gray;
+        }
+    }
+    .Card {
+        @include variables.flex('column', 'center', 'center');
+        h3, p {
+            text-align: center;
+        }
+        h3 {
+            font-size: 22px;
+        }
+        p {
+            font-size: 15px;
+            color: variables.$gray;
+            margin-top: 0;
+            width: 85%;
+            margin: auto;
+        }
+        .CardCircle {
+            white-space: pre-wrap;
+            margin: -50px auto 0;
+            width: 100px;
+            height: 100px;
+            z-index: 1;
+            background-color: variables.$darkerBlue;
+            border-radius: 100%;
+            @include variables.centerContent('row');
+        }
+        .CardInfo {
+            margin: -50px auto 0;
+            background-color: white;
+            width: 85%;
+            padding: 60px 0 50px;
+            border-radius: 10px;
+        }
+        .vl {
+            border-left: 10px solid variables.$turquoise;
+            height: 90px;
+            position: relative;
+            left: 50%;
+            margin-left: -3px;
+            top: 0;
+          }
+    }
+    .Card:last-of-type {
+        .vl {
+            display: none;
+        }
+    }
+}

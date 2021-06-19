@@ -1,0 +1,25 @@
+// color variables
+
+$black: #34313D;
+$blacker: #232127;
+$darkerBlue: #3A3054;
+$lighterBlue: #4B3F6B;
+$gray: #9E9AA8;
+$lightGray: #EFF1F7;
+$turquoise: #2BD0D0;
+
+// mixins
+
+@mixin flex($direction, $justification, $alignment) {
+    display: flex;
+    flex-direction: #{$direction};
+    justify-content: #{$justification};
+    align-items: #{alignment};
+}
+
+@mixin centerContent($direction) {
+    display: flex;
+    flex-direction: #{direction};
+    justify-content: center;
+    align-items: center;
+}

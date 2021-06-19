@@ -1,0 +1,44 @@
+@use 'variables';
+
+.LinkShortener {
+    box-sizing: border-box;
+    position: relative;
+    .LSBox {
+        background-color: variables.$lightGray;
+        .Input {
+            @include variables.flex('column', 'space-evenly', 'center');
+            width: 90%;
+            position: relative;
+            margin: auto;
+            top: -80px;
+            padding: 10px 0;
+            height: 40vw;
+            background-color: variables.$darkerBlue;
+            border-radius: 10px;
+            background-image: url(../assets/img/bg-shorten-mobile.svg);
+            background-position: 100%;
+            background-repeat: no-repeat;
+            input, button {
+                width: 85%;
+                margin: auto;
+                height: 50px;
+                border-radius: 10px;
+            }
+            input {
+                &::placeholder {
+                    padding-left: 10px;
+                    font: 500 16px "Poppins";
+                }
+            }
+            button {
+                border: none;
+                background-color: variables.$turquoise;
+                color: white;
+                font: 700 18px "Poppins";
+            }
+        }
+    }
+    .noDisplay {
+        display: none;
+    }
+}
