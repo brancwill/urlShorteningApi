@@ -1,33 +1,69 @@
 @use 'variables';
+@use '../../node_modules/include-media/dist/include-media';
 
 .LinkShortener {
     box-sizing: border-box;
     position: relative;
     .LSBox {
-        background-color: variables.$lightGray;
+        .isNotLink {
+            border: 3px solid #F46363;
+            color: #F46363;
+        }
+        .NotLink {
+            color: #F46363;
+            margin: 0;
+            margin-left: 8%;
+            font: 500 italic 12px "Poppins";
+            @include include-media.media('>=largePhone') {
+                font-size: 18px;
+            }
+        }
         .Input {
             @include variables.flex('column', 'space-evenly', 'center');
             width: 90%;
             position: relative;
-            margin: auto;
+            margin: -150px auto 0;
             top: -80px;
             padding: 10px 0;
             height: 40vw;
+            max-height: 250px;
+            max-width: 700px;
             background-color: variables.$darkerBlue;
             border-radius: 10px;
             background-image: url(../assets/img/bg-shorten-mobile.svg);
             background-position: 100%;
             background-repeat: no-repeat;
+            @include include-media.media('>=largePhone') {
+                top: -110px;
+            }
+            @include include-media.media('>=tablet') {
+                top: -130px;
+            }
             input, button {
                 width: 85%;
                 margin: auto;
                 height: 50px;
                 border-radius: 10px;
+                @include include-media.media('>=largePhone') {
+                    height: 70px;
+                }
             }
             input {
+                font: 500 16px "Poppins";
+                padding-left: 5%;
+                box-sizing: border-box;
+                &:focus {
+                    outline-color: white;
+                }
+                @include include-media.media('>=largePhone') {
+                    font-size: 20px;
+                }
                 &::placeholder {
-                    padding-left: 10px;
+                    padding-left: 5%;
                     font: 500 16px "Poppins";
+                    @include include-media.media('>=largePhone') {
+                        font-size: 20px;
+                    }
                 }
             }
             button {
@@ -35,10 +71,72 @@
                 background-color: variables.$turquoise;
                 color: white;
                 font: 700 18px "Poppins";
+                @include include-media.media('>=largePhone') {
+                    font-size: 24px;
+                }
             }
         }
     }
-    .noDisplay {
-        display: none;
+    .LinkList {
+        @include variables.flex('column', 'space-evenly', 'center');
+        gap: 5%;
+        width: 90%;
+        height: auto;
+        margin:  -10% auto 0;
+        .LinkBox {
+            @include variables.flex('column', 'space-evenly', 'center');
+            text-align: left;
+            margin: 0 auto 10%;
+            box-sizing: border-box;
+            width: 100%;
+            height: auto;
+            min-height: 40vw;
+            padding: 0 0 5%;
+            background-color: white;
+            border-radius: 10px;
+            .OrigLink, .LinkContainer {
+                width: 100%;
+            }
+            .OrigLink {
+                border-bottom: 1px solid variables.$gray;
+                padding: 0 30px;
+                box-sizing: border-box;
+                overflow: hidden;
+                white-space: nowrap;
+                p {
+                    font-size: 22px;
+                    width: 100%;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+            .LinkContainer {
+                @include variables.flex('column', 'space-around', 'center');
+                color: variables.$turquoise;
+                margin: auto;
+                p {
+                    padding-left: 30px;
+                    font-size: 22px;
+                }
+                button {
+                    color: white;
+                    background-color: variables.$turquoise;
+                    border: none;
+                    border-radius: 5px;
+                    text-align: center;
+                    width: 90%;
+                    height: 42px;
+                    margin: auto;
+                    font: 700 22px "Poppins";
+                    @include include-media.media('>=largePhone') {
+                        height: 60px;
+                    }
+                }
+            }
+            .Clicked {
+                background-color: variables.$darkerBlue;
+            }
+        }
     }
 }

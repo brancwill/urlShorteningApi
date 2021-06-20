@@ -1,10 +1,12 @@
 @use 'variables';
+@use '../../node_modules/include-media/dist/include-media';
 
 @use 'navigation';
 @use 'getStarted';
 @use 'linkShortener';
 @use 'about';
 @use 'footer';
+@use 'loading';
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,700;1,500&display=swap');
 
@@ -28,20 +30,50 @@ body {
 
 h1 {
     font: 700 42px "Poppins";
+    @include include-media.media('>=largePhone') {
+        font-size: 48px;
+    }
+    @include include-media.media('>=tablet') {
+        font-size: 54px;
+    }
 }
 
 h2 {
     font: 700 28px "Poppins";
+    @include include-media.media('>=largePhone') {
+        font-size: 34px;
+    }
+    @include include-media.media('>=tablet') {
+        font-size: 40px;
+    }
 }
 
 h3 {
     font: 700 22px "Poppins";
+    @include include-media.media('>=largePhone') {
+        font-size: 28px;
+    }
+    @include include-media.media('>=tablet') {
+        font-size: 30px;
+    }
 }
 
 h4 {
     font: 700 18px "Poppins";
+    @include include-media.media('>=largePhone') {
+        font-size: 22px;
+    }
+    @include include-media.media('>=tablet') {
+        font-size: 26px;
+    }
 }
 
 p {
     font: 500 18px "Poppins";
+    @include include-media.media('>=largePhone') {
+        font-size: 20px;
+    }
+    @include include-media.media('>=tablet') {
+        font-size: 22px;
+    }
 }

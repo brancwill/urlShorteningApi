@@ -87,10 +87,9 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: alignment;
-  padding: 400px 0 180px;
+  padding: 400px 0 280px;
   width: 100%;
   margin: 0;
-  padding-left: 0;
   background-image: url(../assets/img/illustration-working.svg);
   background-repeat: no-repeat;
   background-size: 130%;
@@ -101,7 +100,18 @@
 }
 .GetStarted h1 {
   color: #34313D;
-  margin: 0 auto 10px;
+  margin: 10vw auto 10px;
+  width: 90%;
+}
+@media (min-width: 500px) {
+  .GetStarted h1 {
+    margin-top: 30vw;
+  }
+}
+@media (min-width: 668px) {
+  .GetStarted h1 {
+    margin-top: 50vw;
+  }
 }
 .GetStarted p {
   width: 85%;
@@ -110,6 +120,7 @@
 }
 .GetStarted button {
   width: 60%;
+  max-width: 700px;
   margin: 40px auto 0;
   height: 56px;
   border-radius: 30px;
@@ -118,13 +129,33 @@
   color: white;
   font: 700 20px "Poppins";
 }
+@media (min-width: 500px) {
+  .GetStarted button {
+    height: 76px;
+    font-size: 24px;
+    margin-top: 60px;
+    border-radius: 40px;
+  }
+}
 
 .LinkShortener {
   box-sizing: border-box;
   position: relative;
 }
-.LinkShortener .LSBox {
-  background-color: #EFF1F7;
+.LinkShortener .LSBox .isNotLink {
+  border: 3px solid #F46363;
+  color: #F46363;
+}
+.LinkShortener .LSBox .NotLink {
+  color: #F46363;
+  margin: 0;
+  margin-left: 8%;
+  font: 500 italic 12px "Poppins";
+}
+@media (min-width: 500px) {
+  .LinkShortener .LSBox .NotLink {
+    font-size: 18px;
+  }
 }
 .LinkShortener .LSBox .Input {
   display: flex;
@@ -133,15 +164,27 @@
   align-items: alignment;
   width: 90%;
   position: relative;
-  margin: auto;
+  margin: -150px auto 0;
   top: -80px;
   padding: 10px 0;
   height: 40vw;
+  max-height: 250px;
+  max-width: 700px;
   background-color: #3A3054;
   border-radius: 10px;
   background-image: url(../assets/img/bg-shorten-mobile.svg);
   background-position: 100%;
   background-repeat: no-repeat;
+}
+@media (min-width: 500px) {
+  .LinkShortener .LSBox .Input {
+    top: -110px;
+  }
+}
+@media (min-width: 668px) {
+  .LinkShortener .LSBox .Input {
+    top: -130px;
+  }
 }
 .LinkShortener .LSBox .Input input, .LinkShortener .LSBox .Input button {
   width: 85%;
@@ -149,9 +192,32 @@
   height: 50px;
   border-radius: 10px;
 }
-.LinkShortener .LSBox .Input input::placeholder {
-  padding-left: 10px;
+@media (min-width: 500px) {
+  .LinkShortener .LSBox .Input input, .LinkShortener .LSBox .Input button {
+    height: 70px;
+  }
+}
+.LinkShortener .LSBox .Input input {
   font: 500 16px "Poppins";
+  padding-left: 5%;
+  box-sizing: border-box;
+}
+.LinkShortener .LSBox .Input input:focus {
+  outline-color: white;
+}
+@media (min-width: 500px) {
+  .LinkShortener .LSBox .Input input {
+    font-size: 20px;
+  }
+}
+.LinkShortener .LSBox .Input input::placeholder {
+  padding-left: 5%;
+  font: 500 16px "Poppins";
+}
+@media (min-width: 500px) {
+  .LinkShortener .LSBox .Input input::placeholder {
+    font-size: 20px;
+  }
 }
 .LinkShortener .LSBox .Input button {
   border: none;
@@ -159,8 +225,83 @@
   color: white;
   font: 700 18px "Poppins";
 }
-.LinkShortener .noDisplay {
-  display: none;
+@media (min-width: 500px) {
+  .LinkShortener .LSBox .Input button {
+    font-size: 24px;
+  }
+}
+.LinkShortener .LinkList {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: alignment;
+  gap: 5%;
+  width: 90%;
+  height: auto;
+  margin: -10% auto 0;
+}
+.LinkShortener .LinkList .LinkBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: alignment;
+  text-align: left;
+  margin: 0 auto 10%;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  min-height: 40vw;
+  padding: 0 0 5%;
+  background-color: white;
+  border-radius: 10px;
+}
+.LinkShortener .LinkList .LinkBox .OrigLink, .LinkShortener .LinkList .LinkBox .LinkContainer {
+  width: 100%;
+}
+.LinkShortener .LinkList .LinkBox .OrigLink {
+  border-bottom: 1px solid #9E9AA8;
+  padding: 0 30px;
+  box-sizing: border-box;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.LinkShortener .LinkList .LinkBox .OrigLink p {
+  font-size: 22px;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.LinkShortener .LinkList .LinkBox .LinkContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: alignment;
+  color: #2BD0D0;
+  margin: auto;
+}
+.LinkShortener .LinkList .LinkBox .LinkContainer p {
+  padding-left: 30px;
+  font-size: 22px;
+}
+.LinkShortener .LinkList .LinkBox .LinkContainer button {
+  color: white;
+  background-color: #2BD0D0;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  width: 90%;
+  height: 42px;
+  margin: auto;
+  font: 700 22px "Poppins";
+}
+@media (min-width: 500px) {
+  .LinkShortener .LinkList .LinkBox .LinkContainer button {
+    height: 60px;
+  }
+}
+.LinkShortener .LinkList .LinkBox .Clicked {
+  background-color: #3A3054;
 }
 
 .About {
@@ -194,12 +335,32 @@
 .About .Card h3 {
   font-size: 22px;
 }
+@media (min-width: 500px) {
+  .About .Card h3 {
+    font-size: 26px;
+  }
+}
+@media (min-width: 668px) {
+  .About .Card h3 {
+    font-size: 30px;
+  }
+}
 .About .Card p {
   font-size: 15px;
   color: #9E9AA8;
   margin-top: 0;
   width: 85%;
   margin: auto;
+}
+@media (min-width: 500px) {
+  .About .Card p {
+    font-size: 18px;
+  }
+}
+@media (min-width: 668px) {
+  .About .Card p {
+    font-size: 20px;
+  }
 }
 .About .Card .CardCircle {
   white-space: pre-wrap;
@@ -232,6 +393,9 @@
 .About .Card:last-of-type .vl {
   display: none;
 }
+.About .Loading {
+  margin: auto;
+}
 
 .Footer .FooterTop {
   display: flex;
@@ -241,6 +405,9 @@
   text-align: center;
   background-color: #3A3054;
   background-image: url(../assets/img/bg-boost-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: right;
   color: white;
   padding: 20% 0;
 }
@@ -253,6 +420,14 @@
   background-color: #2BD0D0;
   color: white;
   font: 700 20px "Poppins";
+}
+@media (min-width: 500px) {
+  .Footer .FooterTop button {
+    font-size: 24px;
+    height: 76px;
+    border-radius: 40px;
+    margin-top: 5%;
+  }
 }
 .Footer .FooterBottom {
   display: flex;
@@ -268,6 +443,11 @@
   margin: auto;
   margin-bottom: 10%;
 }
+@media (min-width: 500px) {
+  .Footer .FooterBottom img {
+    width: 30%;
+  }
+}
 .Footer .FooterBottom .FooterList {
   display: flex;
   flex-direction: column;
@@ -280,9 +460,19 @@
   color: white;
   font: 700 16px "Poppins";
 }
+@media (min-width: 500px) {
+  .Footer .FooterBottom .FooterList .FooterTitle {
+    font-size: 24px;
+  }
+}
 .Footer .FooterBottom .FooterList p {
-  color: #EFF1F7;
+  color: #9E9AA8;
   font: 500 15px "Poppins";
+}
+@media (min-width: 500px) {
+  .Footer .FooterBottom .FooterList p {
+    font-size: 20px;
+  }
 }
 .Footer .FooterBottom .SocIcons {
   display: flex;
@@ -290,9 +480,65 @@
   justify-content: space-evenly;
   align-items: alignment;
   width: 50%;
-  margin: 10% auto 0;
+  margin: 5% auto 0;
+  max-width: 150px;
+}
+@media (min-width: 500px) {
+  .Footer .FooterBottom .SocIcons {
+    max-width: 300px;
+  }
+}
+.Footer .FooterBottom .SocIcons img {
+  width: auto;
+}
+@media (min-width: 500px) {
+  .Footer .FooterBottom .SocIcons img {
+    min-height: 30px;
+    max-height: 60px;
+  }
 }
 
+.lds-facebook {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  background: #2BD0D0;
+  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+
+.lds-facebook div:nth-child(1) {
+  left: 8px;
+  animation-delay: -0.24s;
+}
+
+.lds-facebook div:nth-child(2) {
+  left: 32px;
+  animation-delay: -0.12s;
+}
+
+.lds-facebook div:nth-child(3) {
+  left: 56px;
+  animation-delay: 0;
+}
+
+@keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  50%, 100% {
+    top: 24px;
+    height: 32px;
+  }
+}
 body {
   margin: 0;
   padding: 0;
@@ -312,21 +558,71 @@ body {
 h1 {
   font: 700 42px "Poppins";
 }
+@media (min-width: 500px) {
+  h1 {
+    font-size: 48px;
+  }
+}
+@media (min-width: 668px) {
+  h1 {
+    font-size: 54px;
+  }
+}
 
 h2 {
   font: 700 28px "Poppins";
+}
+@media (min-width: 500px) {
+  h2 {
+    font-size: 34px;
+  }
+}
+@media (min-width: 668px) {
+  h2 {
+    font-size: 40px;
+  }
 }
 
 h3 {
   font: 700 22px "Poppins";
 }
+@media (min-width: 500px) {
+  h3 {
+    font-size: 28px;
+  }
+}
+@media (min-width: 668px) {
+  h3 {
+    font-size: 30px;
+  }
+}
 
 h4 {
   font: 700 18px "Poppins";
 }
+@media (min-width: 500px) {
+  h4 {
+    font-size: 22px;
+  }
+}
+@media (min-width: 668px) {
+  h4 {
+    font-size: 26px;
+  }
+}
 
 p {
   font: 500 18px "Poppins";
+}
+@media (min-width: 500px) {
+  p {
+    font-size: 20px;
+  }
+}
+@media (min-width: 668px) {
+  p {
+    font-size: 22px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,5 +1,6 @@
 import React from 'react';
 import Cards from './components/Cards'
+import LinkShortener from './components/LinkShortener';
 
 import Circle1 from './assets/img/icon-brand-recognition.svg';
 import Circle2 from './assets/img/icon-detailed-records.svg'
@@ -8,6 +9,7 @@ import Circle3 from './assets/img/icon-fully-customizable.svg'
 function About() {
     return (
         <div className="About">
+            <LinkShortener />
             <div className="TopInfo">
                 <h2>Advanced Statistics</h2>
                 <p>Track how your links are performing across the web with our advanced statistics dashboard.</p>
