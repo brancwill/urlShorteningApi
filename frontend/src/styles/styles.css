@@ -5,19 +5,40 @@
   justify-content: space-between;
   align-items: alignment;
   width: 100%;
-  padding: 40px 3vw 0;
+  padding: 7vh 5vw 0;
   box-sizing: border-box;
 }
+@media (min-width: 1024px) {
+  .Navigation {
+    padding: 4vh 0 4vh 1.5vw;
+    justify-content: space-evenly;
+  }
+}
 .Navigation .Logo {
-  height: 12vw;
+  height: 8vw;
   min-height: 30px;
   max-height: 60px;
   width: auto;
   margin: 0;
 }
+@media (min-width: 1024px) {
+  .Navigation .Logo {
+    width: auto;
+    height: 4vw;
+    max-height: 30px;
+    max-width: 120px;
+    min-height: none;
+    min-width: none;
+    margin: 10px -27% 0 -25%;
+  }
+}
 .Navigation .Hamburger {
-  margin-top: 10px;
   max-height: 50px;
+}
+@media (min-width: 1024px) {
+  .Navigation .Hamburger {
+    display: none;
+  }
 }
 .Navigation .Hamburger .Line {
   width: 7vw;
@@ -54,6 +75,7 @@
 .Navigation .open a {
   text-decoration: none;
   color: white;
+  cursor: pointer;
 }
 .Navigation .open h4 {
   display: flex;
@@ -77,9 +99,52 @@
   height: 50px;
   background-color: #2BD0D0;
   border-radius: 30px;
+  transition: background-color 0.5s;
+}
+.Navigation .open .mobileNavBot .MobileSignUp:hover {
+  background-color: #9AE3E3;
 }
 .Navigation .desktopNav {
   display: none;
+}
+@media (min-width: 1024px) {
+  .Navigation .desktopNav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: alignment;
+    margin: -0.5% 0 0;
+    padding: 0;
+    gap: 15%;
+  }
+  .Navigation .desktopNav:last-child {
+    margin-right: -20%;
+  }
+  .Navigation .desktopNav a {
+    text-decoration: none;
+    color: #9E9AA8;
+    transition: color 0.5s;
+    cursor: pointer;
+  }
+  .Navigation .desktopNav a:hover {
+    color: #232127;
+  }
+  .Navigation .desktopNav a h4 {
+    font: 700 15px "Poppins";
+    white-space: nowrap;
+  }
+  .Navigation .desktopNav .DesktopSignUp {
+    display: block;
+    background-color: #2BD0D0;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 20px;
+    margin-top: 10px;
+    transition: background-color 0.5s;
+  }
+  .Navigation .desktopNav .DesktopSignUp:hover {
+    background-color: #9AE3E3;
+  }
 }
 
 .GetStarted {
@@ -95,8 +160,21 @@
   background-size: 130%;
   background-position: -10% 5%;
 }
+@media (min-width: 1024px) {
+  .GetStarted {
+    background-size: 55%;
+    background-position: 125% 0;
+    padding: 0 0 320px;
+    height: auto;
+  }
+}
 .GetStarted h1, .GetStarted p {
   text-align: center;
+}
+@media (min-width: 1024px) {
+  .GetStarted h1, .GetStarted p {
+    text-align: left;
+  }
 }
 .GetStarted h1 {
   color: #34313D;
@@ -113,10 +191,23 @@
     margin-top: 50vw;
   }
 }
+@media (min-width: 1024px) {
+  .GetStarted h1 {
+    margin: 0 0 0 10%;
+    width: 50%;
+    font-size: 70px;
+  }
+}
 .GetStarted p {
   width: 85%;
   margin: 0 auto;
   color: #9E9AA8;
+}
+@media (min-width: 1024px) {
+  .GetStarted p {
+    width: 45%;
+    margin-left: 10%;
+  }
 }
 .GetStarted button {
   width: 60%;
@@ -128,6 +219,11 @@
   background-color: #2BD0D0;
   color: white;
   font: 700 20px "Poppins";
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+.GetStarted button:hover {
+  background-color: #9AE3E3;
 }
 @media (min-width: 500px) {
   .GetStarted button {
@@ -135,6 +231,14 @@
     font-size: 24px;
     margin-top: 60px;
     border-radius: 40px;
+  }
+}
+@media (min-width: 1024px) {
+  .GetStarted button {
+    margin: 3% 0 0 10%;
+    width: 18%;
+    height: 56px;
+    font-size: 20px;
   }
 }
 
@@ -155,6 +259,14 @@
 @media (min-width: 500px) {
   .LinkShortener .LSBox .NotLink {
     font-size: 18px;
+  }
+}
+@media (min-width: 1024px) {
+  .LinkShortener .LSBox .NotLink {
+    position: absolute;
+    top: 75%;
+    left: -4%;
+    white-space: nowrap;
   }
 }
 .LinkShortener .LSBox .Input {
@@ -186,6 +298,18 @@
     top: -130px;
   }
 }
+@media (min-width: 1024px) {
+  .LinkShortener .LSBox .Input {
+    max-width: 80%;
+    max-height: 150px;
+    top: 70px;
+    background-image: url(../assets/img/bg-shorten-desktop.svg);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: alignment;
+  }
+}
 .LinkShortener .LSBox .Input input, .LinkShortener .LSBox .Input button {
   width: 85%;
   margin: auto;
@@ -195,6 +319,11 @@
 @media (min-width: 500px) {
   .LinkShortener .LSBox .Input input, .LinkShortener .LSBox .Input button {
     height: 70px;
+  }
+}
+@media (min-width: 1024px) {
+  .LinkShortener .LSBox .Input input, .LinkShortener .LSBox .Input button {
+    height: 64px;
   }
 }
 .LinkShortener .LSBox .Input input {
@@ -210,8 +339,15 @@
     font-size: 20px;
   }
 }
+@media (min-width: 1024px) {
+  .LinkShortener .LSBox .Input input {
+    width: 70%;
+    margin-right: 0;
+    padding-left: 3%;
+  }
+}
 .LinkShortener .LSBox .Input input::placeholder {
-  padding-left: 5%;
+  padding-left: 3%;
   font: 500 16px "Poppins";
 }
 @media (min-width: 500px) {
@@ -224,10 +360,20 @@
   background-color: #2BD0D0;
   color: white;
   font: 700 18px "Poppins";
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+.LinkShortener .LSBox .Input button:hover {
+  background-color: #9AE3E3;
 }
 @media (min-width: 500px) {
   .LinkShortener .LSBox .Input button {
     font-size: 24px;
+  }
+}
+@media (min-width: 1024px) {
+  .LinkShortener .LSBox .Input button {
+    width: 20%;
   }
 }
 .LinkShortener .LinkList {
@@ -249,8 +395,9 @@
   margin: 0 auto 10%;
   box-sizing: border-box;
   width: 100%;
+  max-width: 700px;
   height: auto;
-  min-height: 40vw;
+  min-height: 100px;
   padding: 0 0 5%;
   background-color: white;
   border-radius: 10px;
@@ -261,16 +408,37 @@
 .LinkShortener .LinkList .LinkBox .OrigLink {
   border-bottom: 1px solid #9E9AA8;
   padding: 0 30px;
+  max-height: 112.5px;
   box-sizing: border-box;
   overflow: hidden;
   white-space: nowrap;
 }
+@media (min-width: 668px) {
+  .LinkShortener .LinkList .LinkBox .OrigLink {
+    padding-left: 50px;
+  }
+}
 .LinkShortener .LinkList .LinkBox .OrigLink p {
-  font-size: 22px;
+  font-size: 18px;
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+@media (max-width: 320px) {
+  .LinkShortener .LinkList .LinkBox .OrigLink p {
+    font-size: 14px;
+  }
+}
+@media (min-width: 500px) {
+  .LinkShortener .LinkList .LinkBox .OrigLink p {
+    font-size: 20px;
+  }
+}
+@media (min-width: 668px) {
+  .LinkShortener .LinkList .LinkBox .OrigLink p {
+    font-size: 28px;
+  }
 }
 .LinkShortener .LinkList .LinkBox .LinkContainer {
   display: flex;
@@ -282,7 +450,23 @@
 }
 .LinkShortener .LinkList .LinkBox .LinkContainer p {
   padding-left: 30px;
-  font-size: 22px;
+  font-size: 18px;
+}
+@media (max-width: 320px) {
+  .LinkShortener .LinkList .LinkBox .LinkContainer p {
+    font-size: 14px;
+  }
+}
+@media (min-width: 500px) {
+  .LinkShortener .LinkList .LinkBox .LinkContainer p {
+    font-size: 20px;
+  }
+}
+@media (min-width: 668px) {
+  .LinkShortener .LinkList .LinkBox .LinkContainer p {
+    font-size: 28px;
+    padding-left: 50px;
+  }
 }
 .LinkShortener .LinkList .LinkBox .LinkContainer button {
   color: white;
@@ -291,13 +475,23 @@
   border-radius: 5px;
   text-align: center;
   width: 90%;
-  height: 42px;
-  margin: auto;
+  height: 50px;
+  margin: 5% auto 0;
   font: 700 22px "Poppins";
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+.LinkShortener .LinkList .LinkBox .LinkContainer button:hover {
+  background-color: #9AE3E3;
 }
 @media (min-width: 500px) {
   .LinkShortener .LinkList .LinkBox .LinkContainer button {
     height: 60px;
+  }
+}
+@media (min-width: 500px) {
+  .LinkShortener .LinkList .LinkBox .LinkContainer button {
+    height: 80px;
   }
 }
 .LinkShortener .LinkList .LinkBox .Clicked {
@@ -314,20 +508,102 @@
   align-items: alignment;
   gap: 10px;
 }
+@media (min-width: 1024px) {
+  .About {
+    padding: 0;
+  }
+}
 .About .TopInfo {
   margin: auto;
   text-align: center;
   padding-bottom: 80px;
   width: 90%;
 }
+@media (min-width: 1024px) {
+  .About .TopInfo {
+    padding: 100px 0;
+  }
+}
 .About .TopInfo p {
   color: #9E9AA8;
+}
+@media (min-width: 1024px) {
+  .About .TopInfo p {
+    width: 50%;
+    margin: auto;
+  }
+}
+.About .NoDisplayMobile {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: alignment;
+  gap: 30px;
+}
+@media (max-width: 668px) {
+  .About .NoDisplayMobile {
+    display: none;
+  }
+}
+.About .NoDisplayMobile .Card {
+  display: block;
+}
+.About .NoDisplayMobile .Card:nth-child(2) {
+  margin-top: 4%;
+}
+.About .NoDisplayMobile .Card:last-child {
+  margin-top: 8%;
+  margin-bottom: 80px;
+}
+.About .NoDisplayMobile .Card .CardCircle {
+  z-index: 2;
+  position: relative;
+  margin-left: 15%;
+  width: 88px;
+  height: 88px;
+}
+.About .NoDisplayMobile .Card .CardInfo {
+  position: relative;
+  width: 25vw;
+  max-width: 400px;
+  min-width: 200px;
+  z-index: 1;
+  height: 12vw;
+  min-height: 150px;
+  max-height: 300px;
+}
+.About .NoDisplayMobile .Card .CardInfo h3 {
+  font-size: 22px;
+}
+.About .NoDisplayMobile .Card .CardInfo p {
+  font-size: 15px;
+  margin-top: -5%;
+}
+.About .NoDisplayMobile .Card .vl2 {
+  border-top: 8px solid #2BD0D0;
+  width: 90px;
+  position: relative;
+  left: 90%;
+  margin-left: -3px;
+  top: -24%;
+  z-index: 0;
+}
+.About .NoDisplayMobile .Card:nth-of-type(2) .vl2 {
+  top: -40%;
+}
+.About .NoDisplayMobile .Card:last-of-type .vl2 {
+  display: none;
 }
 .About .Card {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: alignment;
+}
+@media (min-width: 1024px) {
+  .About .Card {
+    display: none;
+  }
 }
 .About .Card h3, .About .Card p {
   text-align: center;
@@ -375,12 +651,22 @@
   justify-content: center;
   align-items: center;
 }
+@media (min-width: 1024px) {
+  .About .Card .CardCircle {
+    margin-left: 10%;
+  }
+}
 .About .Card .CardInfo {
   margin: -50px auto 0;
   background-color: white;
   width: 85%;
   padding: 60px 0 50px;
   border-radius: 10px;
+}
+@media (min-width: 1024px) {
+  .About .Card .CardInfo {
+    width: 30%;
+  }
 }
 .About .Card .vl {
   border-left: 10px solid #2BD0D0;
@@ -389,6 +675,11 @@
   left: 50%;
   margin-left: -3px;
   top: 0;
+}
+@media (min-width: 1024px) {
+  .About .Card .vl {
+    display: none;
+  }
 }
 .About .Card:last-of-type .vl {
   display: none;
@@ -411,6 +702,13 @@
   color: white;
   padding: 20% 0;
 }
+@media (min-width: 1024px) {
+  .Footer .FooterTop {
+    padding: 1% 0 5%;
+    background-image: url(../assets/img/bg-boost-desktop.svg);
+    background-size: cover;
+  }
+}
 .Footer .FooterTop button {
   width: 60%;
   margin: auto;
@@ -420,6 +718,11 @@
   background-color: #2BD0D0;
   color: white;
   font: 700 20px "Poppins";
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+.Footer .FooterTop button:hover {
+  background-color: #9AE3E3;
 }
 @media (min-width: 500px) {
   .Footer .FooterTop button {
@@ -427,6 +730,13 @@
     height: 76px;
     border-radius: 40px;
     margin-top: 5%;
+  }
+}
+@media (min-width: 1024px) {
+  .Footer .FooterTop button {
+    margin-top: 0;
+    width: 30%;
+    height: 55px;
   }
 }
 .Footer .FooterBottom {
@@ -438,6 +748,16 @@
   padding-top: 18%;
   padding-bottom: 30px;
 }
+@media (min-width: 1024px) {
+  .Footer .FooterBottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: alignment;
+    padding-top: 0;
+    height: 45vh;
+  }
+}
 .Footer .FooterBottom img {
   filter: brightness(0) invert(100);
   margin: auto;
@@ -448,6 +768,13 @@
     width: 30%;
   }
 }
+@media (min-width: 1024px) {
+  .Footer .FooterBottom img {
+    width: 8%;
+    margin-top: 50px;
+    height: 11%;
+  }
+}
 .Footer .FooterBottom .FooterList {
   display: flex;
   flex-direction: column;
@@ -456,22 +783,46 @@
   margin: auto;
   text-align: center;
 }
+@media (min-width: 1024px) {
+  .Footer .FooterBottom .FooterList {
+    margin-top: 30px;
+  }
+}
 .Footer .FooterBottom .FooterList .FooterTitle {
   color: white;
   font: 700 16px "Poppins";
+  cursor: default;
+}
+.Footer .FooterBottom .FooterList .FooterTitle:hover {
+  color: white;
 }
 @media (min-width: 500px) {
   .Footer .FooterBottom .FooterList .FooterTitle {
     font-size: 24px;
   }
 }
+@media (min-width: 1024px) {
+  .Footer .FooterBottom .FooterList .FooterTitle {
+    font-size: 16px;
+  }
+}
 .Footer .FooterBottom .FooterList p {
   color: #9E9AA8;
   font: 500 15px "Poppins";
+  cursor: pointer;
+  transition: color 0.5s;
+}
+.Footer .FooterBottom .FooterList p:hover {
+  color: #2BD0D0;
 }
 @media (min-width: 500px) {
   .Footer .FooterBottom .FooterList p {
     font-size: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  .Footer .FooterBottom .FooterList p {
+    font-size: 15px;
   }
 }
 .Footer .FooterBottom .SocIcons {
@@ -488,8 +839,17 @@
     max-width: 300px;
   }
 }
+@media (min-width: 1024px) {
+  .Footer .FooterBottom .SocIcons {
+    margin-top: 0px;
+  }
+}
 .Footer .FooterBottom .SocIcons img {
   width: auto;
+  cursor: pointer;
+}
+.Footer .FooterBottom .SocIcons img:hover {
+  filter: brightness(0) invert(63%) sepia(79%) saturate(389%) hue-rotate(131deg) brightness(94%) contrast(94%);
 }
 @media (min-width: 500px) {
   .Footer .FooterBottom .SocIcons img {

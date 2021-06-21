@@ -17,6 +17,11 @@ function About() {
             <Cards img={Circle1} title="Brand Recognition" description="Boost your brand recognition with each click. Generic links don’t mean a thing. Branded links help instil confidence in your content." />
             <Cards img={Circle2} title="Detailed Records" description="Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions." />
             <Cards img={Circle3} title="Fully Customizable" description="Improve brand awareness and content discoverability through customizable links, supercharging audience engagement." />
+            <div className="NoDisplayMobile">
+                <Cards img={Circle1} title="Brand Recognition" description="Boost your brand recognition with each click. Generic links don’t mean a thing. Branded links help instil confidence in your content." />
+                <Cards img={Circle2} title="Detailed Records" description="Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions." />
+                <Cards img={Circle3} title="Fully Customizable" description="Improve brand awareness and content discoverability through customizable links, supercharging audience engagement." />
+            </div>
         </div>
     );
 }

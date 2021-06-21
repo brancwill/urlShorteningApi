@@ -4,18 +4,33 @@
 .Navigation {
     @include variables.flex('row', 'space-between', 'center');
     width: 100%;
-    padding: 40px 3vw 0;
+    padding: 7vh 5vw 0;
     box-sizing: border-box;
+    @include include-media.media('>=desktop') {
+        padding: 4vh 0 4vh 1.5vw;
+        justify-content: space-evenly;
+    }
     .Logo {
-        height: 12vw;
+        height: 8vw;
         min-height: 30px;
         max-height: 60px;
         width: auto;
         margin: 0;
+        @include include-media.media('>=desktop') { 
+            width: auto;
+            height: 4vw;
+            max-height: 30px;
+            max-width: 120px;
+            min-height: none;
+            min-width: none;
+            margin: 10px -27% 0 -25%;
+        }
     }
     .Hamburger {
-        margin-top: 10px;
         max-height: 50px;
+        @include include-media.media('>=desktop') {
+            display: none;
+        }
         .Line {
             width: 7vw;
             max-width: 70px;
@@ -48,6 +63,7 @@
         a {
             text-decoration: none;
             color: white;
+            cursor: pointer;
         }
         h4 {
             @include variables.centerContent('row');
@@ -66,10 +82,42 @@
                 height: 50px;
                 background-color: variables.$turquoise;
                 border-radius: 30px;
+                @include variables.buttonHover;
             }
         }
     }
     .desktopNav {
         display: none;
+        @include include-media.media('>=desktop') {
+            @include variables.flex('row', 'space-evenly', 'center');
+            margin: -0.5% 0 0;
+            padding: 0;
+            gap: 15%;
+            &:last-child {
+                margin-right: -20%;
+            }
+            a {
+                text-decoration: none;
+                color: variables.$gray;
+                transition: color 0.5s;
+                cursor: pointer;
+                &:hover {
+                    color: variables.$blacker;
+                }
+                h4 {
+                    font: 700 15px "Poppins";
+                    white-space: nowrap;
+                }
+            }
+            .DesktopSignUp {
+                display: block;
+                background-color: variables.$turquoise;
+                color: white;
+                padding: 10px 25px;
+                border-radius: 20px;
+                margin-top: 10px;
+                @include variables.buttonHover;
+            }
+        }
     }
 }

@@ -33,17 +33,15 @@ const Navigation = () => {
                 <a href='#'><h4 className="MobileSignUp">Sign Up</h4></a>
                 </div>
             </div>
-            <div className="desktopNav">
-                <div className="desktopLinks">
+                <div className="desktopNav">
                     <a href='#'><h4>Features</h4></a>
                     <a href='#'><h4>Pricing</h4></a>
                     <a href='#'><h4>Resources</h4></a>
                 </div>
-                <div className="desktopSignIn">
+                <div className="desktopNav">
                     <a href='#'><h4>Login</h4></a>
-                    <a href='#'><h4 className="MobileSignUp">Sign Up</h4></a>
+                    <a href='#'><h4 className="DesktopSignUp">Sign Up</h4></a>
                 </div>
-            </div>
         </div>
     )
 }

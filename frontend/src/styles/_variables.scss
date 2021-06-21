@@ -7,6 +7,7 @@ $lighterBlue: #4B3F6B;
 $gray: #9E9AA8;
 $lightGray: #EFF1F7;
 $turquoise: #2BD0D0;
+$lightTurquoise: #9AE3E3;
 
 // mixins
 
@@ -22,4 +23,18 @@ $turquoise: #2BD0D0;
     flex-direction: #{direction};
     justify-content: center;
     align-items: center;
+}
+
+@mixin hover {
+    transition: color 0.5s;
+    &:hover {
+        color: $turquoise;
+    }
+}
+
+@mixin buttonHover {
+    transition: background-color 0.5s;
+    &:hover {
+        background-color: $lightTurquoise;
+    }
 }

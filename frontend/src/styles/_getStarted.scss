@@ -10,8 +10,17 @@
     background-repeat: no-repeat;
     background-size: 130%;
     background-position: -10% 5%;
+    @include include-media.media('>=desktop') {
+        background-size: 55%;
+        background-position: 125% 0;
+        padding: 0 0 320px;
+        height: auto;
+    }
     h1, p {
         text-align: center;
+        @include include-media.media('>=desktop') {
+            text-align: left;
+        }
     }
     h1 {
         color: variables.$black;
@@ -23,11 +32,20 @@
         @include include-media.media('>=tablet') {
             margin-top: 50vw;
         }
+        @include include-media.media('>=desktop') {
+            margin: 0 0 0 10% ;
+            width: 50%;
+            font-size: 70px;
+        }
     }
     p {
         width: 85%;
         margin: 0 auto;
         color: variables.$gray;
+        @include include-media.media('>=desktop') {
+            width: 45%;
+            margin-left: 10%;
+        }
     }
     button {
         width: 60%;
@@ -39,11 +57,19 @@
         background-color: variables.$turquoise;
         color: white;
         font: 700 20px "Poppins";
+        cursor: pointer;
+        @include variables.buttonHover;
         @include include-media.media('>=largePhone') {
             height: 76px;
             font-size: 24px;
             margin-top: 60px;
             border-radius: 40px;
+        }
+        @include include-media.media('>=desktop') {
+            margin: 3% 0 0 10% ;
+            width: 18%;
+            height: 56px;
+            font-size: 20px;
         }
     }
 }

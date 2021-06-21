@@ -7,17 +7,90 @@
     background-color: variables.$lightGray;
     @include variables.flex('column', 'space-evenly', 'center');
     gap: 10px;
+    @include include-media.media('>=desktop') {
+        padding: 0;
+    }
     .TopInfo {
         margin: auto;
         text-align: center;
         padding-bottom: 80px;
         width: 90%;
+        @include include-media.media('>=desktop') {
+            padding: 100px 0;
+        }
         p {
             color: variables.$gray;
+            @include include-media.media('>=desktop') {
+                width: 50%;
+                margin: auto;
+            }
+        }
+    }
+    .NoDisplayMobile {
+        @include variables.flex('row', 'center', 'center');
+        gap: 30px;
+        @include include-media.media('<=tablet') {
+            display: none;
+        }
+        .Card {
+            display: block;
+            &:nth-child(2) {
+                margin-top: 4%;
+            }
+            &:last-child {
+                margin-top: 8%;
+                margin-bottom: 80px;
+            }
+            .CardCircle {
+                z-index: 2;
+                position: relative;
+                margin-left: 15%;
+                width: 88px;
+                height: 88px;
+            }
+            .CardInfo {
+                position: relative;
+                width: 25vw;
+                max-width: 400px;
+                min-width: 200px;
+                z-index: 1;
+                height: 12vw;
+                min-height: 150px;
+                max-height: 300px;
+                h3 {
+                    font-size: 22px;
+                }
+                p {
+                    font-size: 15px;
+                    margin-top: -5%;
+                }
+            }
+            .vl2 {
+                border-top: 8px solid variables.$turquoise;
+                width: 90px;
+                position: relative;
+                left: 90%;
+                margin-left: -3px;
+                top: -24%;
+                z-index: 0;
+              }
+        }
+        .Card:nth-of-type(2) {
+            .vl2 {
+                top: -40%;
+            }
+        }
+        .Card:last-of-type {
+            .vl2 {
+                display: none;
+            }
         }
     }
     .Card {
         @include variables.flex('column', 'center', 'center');
+        @include include-media.media('>=desktop') {
+            display: none;
+        }
         h3, p {
             text-align: center;
         }
@@ -52,6 +125,9 @@
             background-color: variables.$darkerBlue;
             border-radius: 100%;
             @include variables.centerContent('row');
+            @include include-media.media('>=desktop') {
+                margin-left: 10%;
+            }
         }
         .CardInfo {
             margin: -50px auto 0;
@@ -59,6 +135,9 @@
             width: 85%;
             padding: 60px 0 50px;
             border-radius: 10px;
+            @include include-media.media('>=desktop') {
+                width: 30%;
+            }
         }
         .vl {
             border-left: 10px solid variables.$turquoise;
@@ -67,6 +146,9 @@
             left: 50%;
             margin-left: -3px;
             top: 0;
+            @include include-media.media('>=desktop') {
+                display: none;
+            }
           }
     }
     .Card:last-of-type {

@@ -11,6 +11,7 @@ function Cards(props) {
                 <p>{props.description}</p>
             </div>
             <div className="vl"></div>
+            <div className="vl2"></div>
         </div>
     );
 }

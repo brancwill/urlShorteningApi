@@ -17,6 +17,12 @@
             @include include-media.media('>=largePhone') {
                 font-size: 18px;
             }
+            @include include-media.media('>=desktop') {
+                position: absolute;
+                top: 75%;
+                left: -4%;
+                white-space: nowrap;
+            }
         }
         .Input {
             @include variables.flex('column', 'space-evenly', 'center');
@@ -39,6 +45,13 @@
             @include include-media.media('>=tablet') {
                 top: -130px;
             }
+            @include include-media.media('>=desktop') {
+                max-width: 80%;
+                max-height: 150px;
+                top: 70px;
+                background-image: url(../assets/img/bg-shorten-desktop.svg);
+                @include variables.flex('row', 'center', 'center');
+            }
             input, button {
                 width: 85%;
                 margin: auto;
@@ -46,6 +59,9 @@
                 border-radius: 10px;
                 @include include-media.media('>=largePhone') {
                     height: 70px;
+                }
+                @include include-media.media('>=desktop') {
+                    height: 64px;
                 }
             }
             input {
@@ -58,8 +74,13 @@
                 @include include-media.media('>=largePhone') {
                     font-size: 20px;
                 }
+                @include include-media.media('>=desktop') {
+                    width: 70%;
+                    margin-right: 0;
+                    padding-left: 3%;
+                }
                 &::placeholder {
-                    padding-left: 5%;
+                    padding-left: 3%;
                     font: 500 16px "Poppins";
                     @include include-media.media('>=largePhone') {
                         font-size: 20px;
@@ -71,8 +92,13 @@
                 background-color: variables.$turquoise;
                 color: white;
                 font: 700 18px "Poppins";
+                cursor: pointer;
+                @include variables.buttonHover;
                 @include include-media.media('>=largePhone') {
                     font-size: 24px;
+                }
+                @include include-media.media('>=desktop') {
+                    width: 20%;
                 }
             }
         }
@@ -89,8 +115,9 @@
             margin: 0 auto 10%;
             box-sizing: border-box;
             width: 100%;
+            max-width: 700px;
             height: auto;
-            min-height: 40vw;
+            min-height: 100px;
             padding: 0 0 5%;
             background-color: white;
             border-radius: 10px;
@@ -100,15 +127,28 @@
             .OrigLink {
                 border-bottom: 1px solid variables.$gray;
                 padding: 0 30px;
+                max-height: 112.5px;
                 box-sizing: border-box;
                 overflow: hidden;
                 white-space: nowrap;
+                @include include-media.media('>=tablet') {
+                    padding-left: 50px;
+                }
                 p {
-                    font-size: 22px;
+                    font-size: 18px;
                     width: 100%;
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
+                    @include include-media.media('<=phone') {
+                        font-size: 14px;
+                    }
+                    @include include-media.media('>=largePhone') {
+                        font-size: 20px;
+                    }
+                    @include include-media.media('>=tablet') {
+                        font-size: 28px;
+                    }
                 }
             }
             .LinkContainer {
@@ -117,7 +157,17 @@
                 margin: auto;
                 p {
                     padding-left: 30px;
-                    font-size: 22px;
+                    font-size: 18px;
+                    @include include-media.media('<=phone') {
+                        font-size: 14px;
+                    }
+                    @include include-media.media('>=largePhone') {
+                        font-size: 20px;
+                    }
+                    @include include-media.media('>=tablet') {
+                        font-size: 28px;
+                        padding-left: 50px;
+                    }
                 }
                 button {
                     color: white;
@@ -126,11 +176,16 @@
                     border-radius: 5px;
                     text-align: center;
                     width: 90%;
-                    height: 42px;
-                    margin: auto;
+                    height: 50px;
+                    margin: 5% auto 0;
                     font: 700 22px "Poppins";
+                    cursor: pointer;
+                    @include variables.buttonHover;
                     @include include-media.media('>=largePhone') {
                         height: 60px;
+                    }
+                    @include include-media.media('>=largePhone') {
+                        height: 80px;
                     }
                 }
             }
