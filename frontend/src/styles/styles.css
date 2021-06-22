@@ -330,7 +330,6 @@
 @media (min-width: 1500px) {
   .LinkShortener .LSBox .Input {
     top: 70px;
-    width: 60%;
   }
 }
 .LinkShortener .LSBox .Input input, .LinkShortener .LSBox .Input button {
@@ -404,10 +403,14 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: alignment;
-  gap: 5%;
   width: 90%;
   height: auto;
   margin: -10% auto 0;
+}
+@media (min-width: 1024px) {
+  .LinkShortener .LinkList {
+    margin: 100px auto 0;
+  }
 }
 .LinkShortener .LinkList .LinkBox {
   display: flex;
@@ -425,6 +428,18 @@
   background-color: white;
   border-radius: 10px;
 }
+@media (min-width: 1024px) {
+  .LinkShortener .LinkList .LinkBox {
+    height: 50px;
+    min-height: 50px;
+    max-height: 50px;
+    max-width: 88%;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto 1%;
+    padding: 0;
+  }
+}
 .LinkShortener .LinkList .LinkBox .OrigLink, .LinkShortener .LinkList .LinkBox .LinkContainer {
   width: 100%;
 }
@@ -439,6 +454,16 @@
 @media (min-width: 668px) {
   .LinkShortener .LinkList .LinkBox .OrigLink {
     padding-left: 50px;
+  }
+}
+@media (min-width: 1024px) {
+  .LinkShortener .LinkList .LinkBox .OrigLink {
+    border: none;
+    padding: 0;
+    padding-left: 30px;
+    max-height: unset;
+    width: 50%;
+    overflow: unset;
   }
 }
 .LinkShortener .LinkList .LinkBox .OrigLink p {
@@ -463,6 +488,11 @@
     font-size: 28px;
   }
 }
+@media (min-width: 1024px) {
+  .LinkShortener .LinkList .LinkBox .OrigLink p {
+    font-size: 16px;
+  }
+}
 .LinkShortener .LinkList .LinkBox .LinkContainer {
   display: flex;
   flex-direction: column;
@@ -470,6 +500,15 @@
   align-items: alignment;
   color: #2BD0D0;
   margin: auto;
+}
+@media (min-width: 1024px) {
+  .LinkShortener .LinkList .LinkBox .LinkContainer {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    width: 60%;
+    margin-right: -13%;
+  }
 }
 .LinkShortener .LinkList .LinkBox .LinkContainer p {
   padding-left: 30px;
@@ -489,6 +528,11 @@
   .LinkShortener .LinkList .LinkBox .LinkContainer p {
     font-size: 28px;
     padding-left: 50px;
+  }
+}
+@media (min-width: 1024px) {
+  .LinkShortener .LinkList .LinkBox .LinkContainer p {
+    font-size: 16px;
   }
 }
 .LinkShortener .LinkList .LinkBox .LinkContainer button {
@@ -515,6 +559,14 @@
 @media (min-width: 500px) {
   .LinkShortener .LinkList .LinkBox .LinkContainer button {
     height: 80px;
+  }
+}
+@media (min-width: 1024px) {
+  .LinkShortener .LinkList .LinkBox .LinkContainer button {
+    height: 30px;
+    width: 120px;
+    font-size: 18px;
+    margin: 10px -14% 0 0;
   }
 }
 .LinkShortener .LinkList .LinkBox .Clicked {

@@ -54,7 +54,6 @@
             }
             @include include-media.media('>=largeScreen') {
                 top: 70px;
-                width: 60%;
             }
             input, button {
                 width: 85%;
@@ -109,10 +108,12 @@
     }
     .LinkList {
         @include variables.flex('column', 'space-evenly', 'center');
-        gap: 5%;
         width: 90%;
         height: auto;
         margin:  -10% auto 0;
+        @include include-media.media('>=desktop') {
+            margin: 100px auto 0;
+        }
         .LinkBox {
             @include variables.flex('column', 'space-evenly', 'center');
             text-align: left;
@@ -125,6 +126,16 @@
             padding: 0 0 5%;
             background-color: white;
             border-radius: 10px;
+            @include include-media.media('>=desktop') {
+                height: 50px;
+                min-height: 50px;
+                max-height: 50px;
+                max-width: 88%;
+                flex-direction: row;
+                justify-content: space-between;
+                margin: 0 auto 1%;
+                padding: 0;
+            }
             .OrigLink, .LinkContainer {
                 width: 100%;
             }
@@ -137,6 +148,14 @@
                 white-space: nowrap;
                 @include include-media.media('>=tablet') {
                     padding-left: 50px;
+                }
+                @include include-media.media('>=desktop') {
+                    border: none;
+                    padding: 0;
+                    padding-left: 30px;
+                    max-height: unset;
+                    width: 50%;
+                    overflow: unset;
                 }
                 p {
                     font-size: 18px;
@@ -153,12 +172,22 @@
                     @include include-media.media('>=tablet') {
                         font-size: 28px;
                     }
+                    @include include-media.media('>=desktop') {
+                        font-size: 16px;
+                    }
                 }
             }
             .LinkContainer {
                 @include variables.flex('column', 'space-around', 'center');
                 color: variables.$turquoise;
                 margin: auto;
+                @include include-media.media('>=desktop') {
+                    flex-direction: row;
+                    justify-content: space-between;
+                    gap: 20px;
+                    width: 60%;
+                    margin-right: -13%;
+                }
                 p {
                     padding-left: 30px;
                     font-size: 18px;
@@ -171,6 +200,9 @@
                     @include include-media.media('>=tablet') {
                         font-size: 28px;
                         padding-left: 50px;
+                    }
+                    @include include-media.media('>=desktop') {
+                        font-size: 16px;
                     }
                 }
                 button {
@@ -190,6 +222,12 @@
                     }
                     @include include-media.media('>=largePhone') {
                         height: 80px;
+                    }
+                    @include include-media.media('>=desktop') {
+                        height: 30px;
+                        width: 120px;
+                        font-size: 18px;
+                        margin: 10px -14% 0 0;
                     }
                 }
             }
