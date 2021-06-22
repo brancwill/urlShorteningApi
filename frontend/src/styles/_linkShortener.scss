@@ -52,6 +52,10 @@
                 background-image: url(../assets/img/bg-shorten-desktop.svg);
                 @include variables.flex('row', 'center', 'center');
             }
+            @include include-media.media('>=largeScreen') {
+                top: 70px;
+                width: 60%;
+            }
             input, button {
                 width: 85%;
                 margin: auto;
